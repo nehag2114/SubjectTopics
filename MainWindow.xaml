@@ -1,0 +1,17 @@
+﻿<Window x:Class="WimeraSampleProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="clr-namespace:WimeraSampleProject.MVVM.View"
+        xmlns:vm="clr-namespace:WimeraSampleProject.MVVM.ViewModel"
+        xmlns:local="clr-namespace:WimeraSampleProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:SubjectsViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <view:SubjectsView/>
+    </Grid>
+</Window>

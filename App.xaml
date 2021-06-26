@@ -1,0 +1,30 @@
+﻿<Application x:Class="WimeraSampleProject.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WimeraSampleProject"
+             xmlns:vm="clr-namespace:WimeraSampleProject.MVVM.ViewModel"
+             xmlns:view="clr-namespace:WimeraSampleProject.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="ButtonTemplate" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Width" Value="Auto" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="VerticalAlignment" Value= "Center" />
+            <Setter Property="Foreground" Value="#FFE75959" />
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+        <DataTemplate DataType="{x:Type vm:SubjectsViewModel}">
+            <view:SubjectsView/>
+        </DataTemplate>
+        <!--<DataTemplate DataType="{x:Type vm:SubjectsViewModel}">
+            <view:TopicView/>
+        </DataTemplate>-->
+    </Application.Resources>
+</Application>

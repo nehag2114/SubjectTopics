@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="WimeraSampleProject.MVVM.View.SubjectsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WimeraSampleProject.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Height="40" Width="80" Content="Maths" Command="{Binding MathsCommand}"/>
+            <Button Height="40" Width="80" Content="Physics" Margin="10" Command="{Binding PhysicsCommand}"/>
+            <Button Height="40" Width="80" Content="Chemistry" Command="{Binding ChemistryCommand}"/>
+        </StackPanel>
+        <Label Grid.Row="1" HorizontalAlignment="Center" 
+               Content="{Binding SelectedSubject}" 
+               Width="150" HorizontalContentAlignment="Center"
+               BorderThickness="5"
+               FontSize="18"
+               VerticalContentAlignment="Center"
+               BorderBrush="LightGray"
+               />
+        <Border Grid.Row="2" Margin="20">
+            <ContentControl Content="{Binding CurrentView}"/>
+        </Border>
+    </Grid>
+</UserControl>
